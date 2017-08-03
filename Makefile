@@ -52,7 +52,7 @@ loaddefs: $(PKG)-autoloads.el
 bump-version:
 	@sed -i -e "s/\(#+SUBTITLE: for version \)[.0-9]*/\1$(VERSION)/" $(PKG).org
 
-texi: $(PKG).texi
+texi: bump-version $(PKG).texi
 info: $(PKG).info dir
 html: $(PKG).html
 pdf:  $(PKG).pdf
